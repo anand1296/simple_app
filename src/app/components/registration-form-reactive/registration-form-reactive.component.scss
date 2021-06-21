@@ -1,0 +1,75 @@
+@import '../../styles/common.scss';
+
+:host {
+    width: inherit;
+}
+
+.reg_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// mat-card {
+//     text-align: center;
+//     width: 100%;
+//     margin: 2em 0em;
+// }
+
+// mat-card-header {
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     margin: 0;
+//     padding: 4%;
+// }
+
+mat-radio-button {
+    margin: 0em 1.2em;
+}
+
+.card_title {
+    font-size: 2.2rem;
+    padding: 2% 0%;
+    width: 100%;
+    color: cornflowerblue;
+    line-height: 0.8em;
+    // white-space: nowrap;
+}
+
+.form_field {
+    // width: 70%;//80%;
+    // color:cornflowerblue;
+}
+
+.form_field.gender {
+    width: 100%;
+    // padding: 0em 1.2em;
+    font-size: 0.85em;
+}
+
+.form_buttons {
+    margin-top: 0.4rem;
+}
+
+.form_buttons .reg_btn {
+    margin: 0% 2%;
+}
+
+.reg_btn.submit {
+    background: cornflowerblue;
+}
+
+.reg_btn.reset {
+    color: cornflowerblue;
+}
+
+
+::ng-deep .radioBtn_alert mat-label{
+    color: red;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}

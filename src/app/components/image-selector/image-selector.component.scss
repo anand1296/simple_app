@@ -1,0 +1,44 @@
+@import '../../styles/common.scss';
+
+:host {
+    width: inherit;
+}
+
+mat-card {
+    width: 50%;
+    margin: 0.1em 0em;
+    // padding-bottom: 0em;
+    padding: 0.1em;
+    cursor: pointer;
+}
+
+.avatar-header {
+    color: dodgerblue;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.card-image img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    // width: auto;
+    height: 13em;
+    object-fit: fill;
+}
+
+.mat-card-image {
+    width: auto;
+    margin: 0;
+}

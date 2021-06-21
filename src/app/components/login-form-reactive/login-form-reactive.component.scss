@@ -1,0 +1,78 @@
+
+@import '../../styles/common.scss';
+
+// mat-card {
+//     text-align: center;
+//     width: 100%;
+//     margin: 2em 0em;
+// }
+
+// mat-card:hover {
+//     transform: translateY(-3px);
+//     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+// }
+
+// mat-card-header {
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     margin: 0;
+//     padding: 4%;
+// }
+
+.login_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_field {
+    width: 80%;
+    color:cornflowerblue;
+}
+
+.forgot_password {
+    display: inline-flex;
+    width: 80%;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.fp_link {
+    text-decoration: underline;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.card_title {
+    font-size: 3em;
+    padding: 2%;
+    width: 100%;
+    color: cornflowerblue;
+    white-space: nowrap;
+}
+
+.form_buttons {
+    margin-top: 0.4rem;
+}
+
+.signin_btn, .google_signin_btn {
+    width: 80%;
+}
+
+.signin_btn{
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+
+.login_btn:hover {
+    color: cornflowerblue;
+    background-color: cornsilk;
+}
+
+.reg_link {
+    width: 100%;
+    padding: 1%;
+    position: relative;
+    top: 0.8em;
+}

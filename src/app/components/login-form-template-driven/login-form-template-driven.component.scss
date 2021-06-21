@@ -1,0 +1,50 @@
+@import '../../styles/common.scss';
+
+.login_main2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-content {
+    padding: 2% 0%;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+.field_main {
+    display: flex;
+    // padding: 2% 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_field {
+    width: 80%;
+    color:cornflowerblue;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    padding: 0em !important;
+}
+
+.card_title {
+    font-size: 2.8em;
+    padding: 2%;
+    width: 100%;
+    color: cornflowerblue;
+    white-space: nowrap;
+}
+
+.signin_btn{
+    background-color: cornflowerblue;
+    color: cornsilk;
+    width: 80%;
+    margin: 2% 0%;
+}
+
+.form-val {
+    padding: 2% 0%;
+}

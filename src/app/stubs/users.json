@@ -1,0 +1,70 @@
+{
+    "userDetails": [
+        {
+            "name": "Anand Khandalekar",
+            "age": "24",
+            "country": "India",
+            "state": "Goa",
+            "city": "Panaji",
+            "gender": "male",
+            "email": "anand@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t3.ftcdn.net/jpg/02/70/25/48/240_F_270254841_otSDX3fPBgcbCiUdir82QjgyF8XSQwD5.jpg"
+        },
+        {
+            "name": "Anoop Kinlekar",
+            "age": "24",
+            "country": "India",
+            "state": "Goa",
+            "city": "Margao",
+            "gender": "male",
+            "email": "anoop@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t4.ftcdn.net/jpg/02/73/16/09/240_F_273160999_u1hoyXmJO3CqAkM6D2v4UocKZlsmPfg9.jpg"
+        },
+        {
+            "name": "Ojas Borkar",
+            "age": "23",
+            "country": "India",
+            "state": "Goa",
+            "city": "Ponda",
+            "gender": "male",
+            "email": "ojas@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t4.ftcdn.net/jpg/03/21/90/47/240_F_321904727_6Xe21aryx4iHdVHJN9gIsIKvSp5iaObX.jpg"
+        },
+        {
+            "name": "Harsh Naik",
+            "age": "24",
+            "country": "India",
+            "state": "Goa",
+            "city": "Margao",
+            "gender": "male",
+            "email": "harsh@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t4.ftcdn.net/jpg/02/81/07/83/240_F_281078312_PcISs3yKL9r70nCqvDkgOR17UBGIw97C.jpg"
+        },
+        {
+            "name": "Sandesh Rai",
+            "age": "24",
+            "country": "India",
+            "state": "Bihar",
+            "city": "Betia",
+            "gender": "male",
+            "email": "sandesh@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t3.ftcdn.net/jpg/02/96/35/64/240_F_296356423_f6IEidPVRWzaqj2MJQ2VLJJTYGRAtY4P.jpg"
+        },
+        {
+            "name": "Rounak Amre",
+            "age": "24",
+            "country": "India",
+            "state": "Goa",
+            "city": "Vasco",
+            "gender": "male",
+            "email": "rounak@tenten.com",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem iusto ex non inventore illo minima ea aperiam id autem ullam deserunt, temporibus totam officia animi porro. Cumque, necessitatibus qui?",
+            "image": "https://t4.ftcdn.net/jpg/02/96/35/63/240_F_296356355_0YlFGZllBt6G7J7MbQUK9XTJTmU351ev.jpg"
+        }
+    ]
+}

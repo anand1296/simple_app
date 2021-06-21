@@ -1,0 +1,32 @@
+<div class="header_main">
+    <!-- <div class="header_content">HomeApp</div> -->
+    <mat-toolbar>
+        <div class="navbar_main">
+        <div class="d-block d-md-none">
+            <button mat-icon-button (click)="onToggleSidenav()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div class="home_btn">
+            <a routerLink="/home">HomeApp</a>
+        </div>
+        <div *ngIf="!isLoggedIn" class="d-none d-md-block route_btns">
+            <ul class="nav_items">
+                <li>
+                    <a routerLink="/login" [ngClass]="{'highlight': highlighter === 'login'}">Login</a>
+                </li>
+                <li>
+                    <a routerLink="/register" [ngClass]="{'highlight': highlighter === 'register'}">Register</a>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="isLoggedIn" class="d-none d-md-block route_btns">
+            <ul class="nav_items">
+                <li>
+                    <a routerLink="/login" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </mat-toolbar>
+</div>

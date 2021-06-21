@@ -1,0 +1,35 @@
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav {
+    // width: 30%;
+}
+
+header, footer, main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    padding: 1%;
+    height: 3.5rem;
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+
+footer {
+    justify-content: center;
+    height: 2rem;
+    color: cornflowerblue;
+    background-color: cornsilk;
+}
+
+main {
+    justify-content: center;
+    flex: auto;
+    min-height: calc(100vh - 3.5rem - 2rem);
+    overflow: auto;
+}

@@ -1,0 +1,135 @@
+<div class="reg_main">
+    <mat-card class="col-md-6 col-xs-10">
+        <mat-card-header>
+            <mat-card-title class="card_title">1010 Registration</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="registration_form">
+                <div class="name">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>First name</mat-label>
+                        <input type="text" formControlName="f_name" matInput required>
+                        <!-- <mat-error *ngIf="registration_form.get('f_name').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="name">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Last name</mat-label>
+                        <input type="text" formControlName="l_name" matInput required >
+                        <!-- <mat-error *ngIf="registration_form.get('l_name').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="dob">
+                    <mat-form-field class="form_field dob col-10">
+                        <mat-label>Date of birth</mat-label>
+                        <input formControlName="dob" matInput [matDatepicker]="picker" required>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <!-- <mat-error *ngIf="registration_form.get('dob').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="gender">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label [ngStyle]="{'color': ((form_submitted || form_reset) && registration_form.get('gender').errors?.required) ? 'red' : ''}">Gender *</mat-label>
+                        <input type="text" matInput required disabled>
+                        <!-- <mat-error *ngIf="registration_form.get('gender').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="form_field gender">
+                    <!-- <mat-form-field class="form_field"> -->
+                        <!-- <mat-label>Gender</mat-label> -->
+                        <mat-radio-group formControlName="gender" required>
+                            <mat-radio-button value="Female" checked="true">Female</mat-radio-button>
+                            <mat-radio-button value="Male">Male</mat-radio-button>
+                            <mat-radio-button value="Other">Other</mat-radio-button>
+                        </mat-radio-group>
+                        <!-- <mat-error *ngIf="registration_form.get('gender').errors?.required"></mat-error> -->
+                    <!-- </mat-form-field> -->
+                </div>
+                <div class="country">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Country</mat-label>
+                        <mat-select formControlName="country" name="country" (valueChange)="countrySelected($event)" required disabled>
+                            <mat-option *ngFor="let country of countries" [value]="country">
+                              {{country}}
+                            </mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="state">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>State</mat-label>
+                        <mat-select formControlName="state" name="state" (valueChange)="stateSelected($event)" [disabled]="stateList.length === 0" required>
+                            <mat-option *ngFor="let state of stateList" [value]="state">
+                              {{state}}
+                            </mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="city">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>City</mat-label>
+                        <mat-select formControlName="city" name="city" [disabled]="cityList.length === 0" required>
+                            <mat-option *ngFor="let city of cityList" [value]="city">
+                              {{city}}
+                            </mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="tech_skills">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Technical skills</mat-label>
+                        <mat-select formControlName="tech_skills" multiple required>
+                            <mat-select-trigger>
+                                {{registration_form.get('tech_skills').value ? registration_form.get('tech_skills').value[0] : ''}}
+                                <span *ngIf="registration_form.get('tech_skills').value?.length > 1" class="example-additional-selection">
+                                  (+{{registration_form.get('tech_skills').value.length - 1}} {{registration_form.get('tech_skills').value?.length === 2 ? 'other' : 'others'}})
+                                </span>
+                              </mat-select-trigger>
+                            <mat-option *ngFor="let techSkill of techSkillList" [value]="techSkill">
+                              {{techSkill}}
+                            </mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="phone">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Mobile No.</mat-label>
+                        <input type="tel" formControlName="phone" matInput required>
+                        <!-- <mat-error *ngIf="registration_form.get('phone').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="email">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Email</mat-label>
+                        <input type="email" formControlName="email" matInput required>
+                        <!-- <mat-error *ngIf="registration_form.get('email').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+                <div class="password">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Password</mat-label>
+                        <input [type]="hide_password ? 'password' : 'text'" formControlName="password" matInput required>
+                        <button mat-icon-button matSuffix (click)="hide_password = !hide_password"
+                            [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide_password">
+                            <mat-icon>{{hide_password ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="registration_form.get('password').errors?.required">Password required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="desc">
+                    <mat-form-field class="form_field col-10">
+                        <mat-label>Short description</mat-label>
+                        <textarea formControlName="desc" matInput placeholder="Write something about yourself!"></textarea>
+                        <!-- <mat-error *ngIf="registration_form.get('desc').errors?.required"></mat-error> -->
+                    </mat-form-field>
+                </div>
+
+                <div class="form_buttons">
+                    <button mat-flat-button color="primary" class="reg_btn submit" (click)="register()" >Register</button>
+                    <button mat-stroked-button color="basic" class="reg_btn reset" (click)="reset()" >Reset</button>
+               </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

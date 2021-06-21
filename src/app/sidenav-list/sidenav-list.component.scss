@@ -1,0 +1,19 @@
+.sidenav_list_main a {
+    text-decoration: none;
+    color: cornsilk;
+}
+
+.sidenav_list_main a {
+    color: cornflowerblue;
+    // background-color: cornsilk;
+}
+
+.sidenav_list_main a:hover, .sidenav_list_main a:active {
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding-left: 6px;
+}

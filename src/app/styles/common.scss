@@ -1,0 +1,24 @@
+
+:host {
+    width: inherit;
+}
+
+mat-card {
+    text-align: center;
+    width: 100%;
+    margin: 2em 0em;
+}
+
+mat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+mat-card-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 4%;
+    width: 100%;
+}

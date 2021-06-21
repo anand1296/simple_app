@@ -1,0 +1,84 @@
+@import '../../styles/common.scss'; 
+
+mat-card {
+    margin: 0.2em;
+}
+
+mat-card-header {
+    padding: 1%;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+mat-card-actions {
+    text-align: start;
+}
+
+mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.mat-card-image {
+    height: 18em;
+}
+
+
+.mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]), 
+.mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]), 
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]){
+    background: none;
+}
+
+mat-expansion-panel-header {
+    padding: 0% 1%;
+}
+
+.home_main {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+}
+
+.home_main .heading {
+    font-weight: 800;
+    font-size: 2em;
+    font-style: italic;
+    color: cornflowerblue;
+}
+
+.home_content {
+    width: 100%;
+}
+
+.card_row, .card_main {
+    padding: 2%;
+}
+
+.accordion_class {
+    flex-basis: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acc_buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.header_image {
+    transform: scale(2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -10px;
+}
+
+.no_users_card{
+    color: crimson;
+    font-style: italic;
+    text-shadow: 0 0 black;
+    font-size: 1.6em;
+}

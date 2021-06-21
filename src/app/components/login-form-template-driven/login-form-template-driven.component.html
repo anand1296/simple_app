@@ -1,0 +1,33 @@
+<div class="login_main2">
+    <mat-card class="col-md-4 col-sm-6 col-xs-6">
+        <mat-card-title class="card_title">
+            1010 Login
+        </mat-card-title>
+        <mat-card-content>
+            <form #loginForm="ngForm" class="login_form2" (ngSubmit)="login(loginForm, $event)">
+                <div class="field_main">
+                    <mat-form-field class="form_field" appearance="outline">
+                        <input matInput type="email" name="email" [(ngModel)]="details.email" 
+                            #email="ngModel" placeholder="Email id" required>
+                        <mat-error *ngIf="email.errors?.required">Email is mandatory!</mat-error>
+                        <mat-error *ngIf="email.errors?.email">Invalid email format!</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="field_main">
+                    <mat-form-field class="form_field" appearance="outline">
+                        <input matInput type="password" name="password" [(ngModel)]="details.password" 
+                            #password="ngModel" placeholder="Password" required>
+                        <mat-error *ngIf="password.errors?.required">Password is mandatory!</mat-error>
+                    </mat-form-field>
+                </div>
+                <button mat-raised-button color="primary" type="submit" class="signin_btn" [disabled]="!loginForm.valid">Login</button>
+            </form>
+            <button mat-raised-button color="tertiary" type="submit" class="signin_btn" (click)="isAvailable = !isAvailable">Test Alternate If directive</button>
+            <button mat-raised-button color="tertiary" type="submit" class="signin_btn" (click)="applyColor = !applyColor">Test Custom color directive</button>
+            <!-- custom directive and bidirectional data binding example -->
+            <div class="form-val" *appAlternateIf="isAvailable" appCustomColor>
+                {{ loginForm.value | json }}
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
