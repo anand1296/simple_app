@@ -82,3 +82,30 @@ mat-expansion-panel-header {
     text-shadow: 0 0 black;
     font-size: 1.6em;
 }
+
+// .search-container {
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+.search-bar {
+    // width: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    // margin: 10% 0% 5% 0%;
+    margin-top: 1.4em;
+}
+
+.search-bar input {
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border: none;
+    position: relative;
+    // left: 5%;
+    background: transparent;
+}

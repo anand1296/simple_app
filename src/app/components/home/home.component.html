@@ -1,4 +1,36 @@
 <div class="home_main container">
+    <div *ngIf="!customFilter" class="search-bar col-lg-4 col-md-6 col-sm-12">
+        <input matInput type="text"
+            placeholder="Search for a street"
+            [formControl]="searchControl"
+            [matAutocomplete]="auto"
+            (keyup)="onKeyUp($event)">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                {{street}}
+            </mat-option>
+        </mat-autocomplete>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="searchVal = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+
+    <!-- debouncing example -->
+    <div *ngIf="customFilter" class="search-bar col-lg-4 col-md-6 col-sm-12">
+        <input matInput type="text"
+            placeholder="Search for a street"
+            [matAutocomplete]="auto"
+            [(ngModel)]="searchVal" 
+            (keyup)="onKeyUp($event)">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let name of tenantNameList" [value]="name">
+                {{name}}
+            </mat-option>
+        </mat-autocomplete>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="searchVal = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
     <div *ngIf="userDetails.length > 0; else noUsers" class="card_row row">
         <div *ngFor="let user of userDetails" class="card_main col-lg-4 col-md-6 col-sm-12">
             <mat-card>
@@ -34,3 +66,4 @@
         </div>
     </ng-template>
 </div>
+

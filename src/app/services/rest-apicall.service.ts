@@ -46,6 +46,10 @@ export class RestAPICallService {
     return this.httpClient.get(this.serverUrl+'/getTenants')
   }
 
+  getTenantNames(keyword){
+    return this.httpClient.get(this.serverUrl+'/getTenantNames/'+keyword)
+  }
+
   authenticateUser(credentials){
     console.log(credentials);
     return this.httpClient.post(this.serverUrl+'/authenticateUser', credentials);

@@ -35,6 +35,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { AlternateIfDirective } from './directives/alternate-if.directive';
 import { CustomColorDirective } from './directives/custom-color.directive';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     SidenavListComponent,
     AlternateIfDirective,
     CustomColorDirective,
-    ImageSelectorComponent
+    ImageSelectorComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,

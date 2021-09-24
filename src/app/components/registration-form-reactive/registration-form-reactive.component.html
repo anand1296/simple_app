@@ -53,7 +53,7 @@
                             <mat-option *ngFor="let country of countries" [value]="country">
                               {{country}}
                             </mat-option>
-                          </mat-select>
+                        </mat-select>
                     </mat-form-field>
                 </div>
                 <div class="state">
@@ -63,7 +63,7 @@
                             <mat-option *ngFor="let state of stateList" [value]="state">
                               {{state}}
                             </mat-option>
-                          </mat-select>
+                        </mat-select>
                     </mat-form-field>
                 </div>
                 <div class="city">
@@ -73,13 +73,13 @@
                             <mat-option *ngFor="let city of cityList" [value]="city">
                               {{city}}
                             </mat-option>
-                          </mat-select>
+                        </mat-select>
                     </mat-form-field>
                 </div>
                 <div class="tech_skills">
                     <mat-form-field class="form_field col-10">
                         <mat-label>Technical skills</mat-label>
-                        <mat-select formControlName="tech_skills" multiple required>
+                        <mat-select #matSelect formControlName="tech_skills" multiple required>
                             <mat-select-trigger>
                                 {{registration_form.get('tech_skills').value ? registration_form.get('tech_skills').value[0] : ''}}
                                 <span *ngIf="registration_form.get('tech_skills').value?.length > 1" class="example-additional-selection">
@@ -89,6 +89,9 @@
                             <mat-option *ngFor="let techSkill of techSkillList" [value]="techSkill">
                               {{techSkill}}
                             </mat-option>
+                            <div class="select-closer">
+                                <button mat-flat-button (click)="matSelect.close()">Close</button>
+                            </div>
                           </mat-select>
                     </mat-form-field>
                 </div>

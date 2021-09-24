@@ -1,0 +1,27 @@
+
+
+.popup-btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-btns button {
+    margin: 0em 0.5em;
+    width: 6em;
+}
+
+.popup-msg {
+    font-size: 1.2em;
+    padding-bottom: 5%;
+}
+
+.popup-btns .positive {
+    color: cornsilk;
+    background-color: cornflowerblue;
+    margin-right: 0%;
+}
+
+::ng-deep .popup-main .mat-dialog-container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

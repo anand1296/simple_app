@@ -30,7 +30,7 @@ mat-card {
 }
 
 .card-image img{
-    flex-shrink: 0;
+    flex-shrink: 1;
     min-width: 100%;
     min-height: 100%;
     // width: auto;
@@ -41,4 +41,8 @@ mat-card {
 .mat-card-image {
     width: auto;
     margin: 0;
+}
+
+.container {
+    max-height: 95vh;
 }

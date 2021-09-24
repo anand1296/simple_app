@@ -73,3 +73,14 @@ mat-radio-button {
     opacity: 0.75;
     font-size: 0.75em;
 }
+
+.select-closer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3%;
+}
+
+.select-closer button {
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
